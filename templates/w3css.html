@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title> {% block title %}{{ title }}{% endblock %} - Daily Comics</title>brown44
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1.0">-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-    <link rel = "stylesheet" type = "text/css" href="./static/style1.css">
+    <link rel="stylesheet" type="text/css" href="./static/style1.css">
 </head>
+
 <body>
     {% for comic in comics %}
     <div class="outerwrapper w3-container w3-flat-wet-asphalt">
@@ -15,9 +17,10 @@
         </div>
         <div class="linkwrapper"><a href="{{ comic.url }}/" class="rotate">{{ comic.url }}/</a>
         </div>
-        <div class="center"><img src="{{ comic.src }}" alt="" class="w-100 h-100"/>
+        <div class="center"><img src="{{ comic.src }}" alt="" class="w-100 h-100" />
         </div>
     </div>
     {% endfor %}
 </body>
+
 </html>
